@@ -1,0 +1,76 @@
+\documentclass[a4paper]{book}
+\usepackage{graphicx} %插入图片
+\usepackage{ctex}
+\usepackage{geometry} %页边距
+\usepackage{listings,xcolor} %代码块
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{amsmath, amsthm}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage[export]{adjustbox}
+% \usepackage{fontspec}
+% \usepackage{xeCJK}
+\geometry{left=2.5cm,right=2.5cm,top=1.5cm,bottom=1.5cm}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\input{../Introduction area/Code Block Configuration}
+
+\begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{0.0cm}\includegraphics[width=0.75\textwidth]{../photo/ACM_logo.jpg} \\ [0cm]
+            \HRule \\ [1cm]
+            \textbf{\Huge{ACM/XCPC Template Manaual}} \\ [0.5cm]
+            \HRule \\ [4cm]
+            \textbf{\Huge{Nanyang Institute of Technology}} \\ [1cm]
+            \textbf{\LARGE{Version: XCPC}} \\ [1cm]
+            \LARGE{zhangpangpang}
+            \vfill
+            \Large{\today}
+        \end{center}
+        \clearpage
+    \end{titlepage}
+    %目录
+    \pagenumbering{roman}
+    \tableofcontents
+    \newpage
+    
+    \pagenumbering{arabic}
+
+    \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+    \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+    \fancyhf{}
+    \fancyfoot[C]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \renewcommand{\headrulewidth}{0.4pt} % 注意不用 \setlength
+    \renewcommand{\footrulewidth}{0pt}
+
+    \setcounter{section}{0}
+    \setcounter{page}{1}
+
+    \def\allfiles{}
+
+    \clearpage
+    \chapter{动态规划}
+    \input{../dp/dp}
+
+    \chapter{数学}
+    \input{../math/math}
+
+    \chapter{图论}
+    \input{../graph/graph}
+
+    \chapter{数据结构}
+    \input{../datastruct/datastruct}
+
+    \chapter{字符串}
+    \input{../string/string}
+
+    \chapter{计算几何}
+    \input{../geometry/geometry}
+
+    \chapter{杂项}
+    \input{../misc/misc}
+\end{document}
